@@ -1,7 +1,10 @@
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // Previne comportamiento por defecto
+  event.preventDefault(); // Previene comportamiento por defecto
+
+  /* Muestra alert con la información cuando se hace el submit */
+  document.getElementById("contenido").style.display = "block";
 
   // Valores ingresados por el usuario
   const nombrePaciente = document.getElementById("nombrePaciente").value;
@@ -9,7 +12,7 @@ form.addEventListener("submit", function (event) {
   const fechaConsulta = document.getElementById("fechaConsulta").value;
 
   if (nombrePaciente == "") {
-    alert("Debes llenar el campo Nombre");
+    alert("Debes llenar el campo Nombre Paciente");
     event.target.nombrePaciente.focus();
   }
 
