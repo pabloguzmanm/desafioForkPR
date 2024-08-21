@@ -12,4 +12,16 @@ form.addEventListener("submit", function (event) {
     alert("Debes llenar el campo Password");
     event.target.variablePassword.focus();
   }
+
+  //mostrar datos en "#contenidos" ingresados en el formulario 
+  let contenido = document.querySelector('#contenido')
+  contenido.innerHTML = `
+      <hr>
+      <br><strong>Nombre paciente: </strong> ${nombrePaciente}
+      <br><strong>Motivo Consulta: </strong> ${motivoConsulta}
+      <br><strong>Fecha Consulta: </strong> ${fechaConsulta}
+      `
+
+  //limpiar formulario
+  formulario.reset()
 });
