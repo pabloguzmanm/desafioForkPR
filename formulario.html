@@ -40,48 +40,39 @@
         </div>
       </nav>
     </div>
+    <!-- Formulario clinica -->
     <div class="container">
-      <div class="row">
-        <div class="col-10">
-          <form>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input
-                name="variableEmail"
-                type="email"
-                class="form-control"
-                id="email"
-                aria-describedby="emailHelp"
-              />
-              <div id="emailHelp" class="form-text">
-                We'll never share your email with anyone else.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input
-                name="variablePassword"
-                type="password"
-                class="form-control"
-                id="password"
-              />
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                name="variableCheck"
-                type="checkbox"
-                class="form-check-input"
-                id="check-condiciones"
-              />
-              <label class="form-check-label" for="check-condiciones"
-                >Check me out</label
-              >
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
+      <h1>Ficha Clínica</h1>
+      <h6>Reserva de Hora</h6>
+      <div class="row mt-5">
+          <div class="col-6">
+              <form>
+                  <div class="mb-3">
+                      <input name="nombrePaciente" type="text" class="form-control" id="nombrePaciente" placeholder="Nombre paciente" required>
+                  </div>
+                  <div class="mb-3">
+                      <textarea name="motivoConsulta" class="form-control" id="motivoConsulta" rows="3" placeholder="Motivo de consulta" required></textarea>
+                  </div>
+                  <div class="mb-3">
+                      <input name="fechaConsulta" type="date" class="form-control" id="fechaConsulta" placeholder="Nombre paciente" required>
+                  </div>
+                  <button class="btn btn-secondary" type="submit">Guardar Datos</button>
+              </form>
+          </div>
       </div>
-    </div>
+
+      <div class="row mt-4">
+          <div class="col-6">
+              <div id="contenido" class="alert alert-light" role="alert">
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
