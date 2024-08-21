@@ -24,17 +24,18 @@ form.addEventListener("submit", function (event) {
   }
 
   if ((nombrePaciente != "") & (motivoConsulta != "") & (fechaConsulta != "")) {
-    /* Muestra alert con la información cuando se hace el submit */
-    document.getElementById("contenido").style.display = "block";
-
     //mostrar datos en "#contenidos" ingresados en el formulario
     let contenido = document.querySelector("#contenido");
     contenido.innerHTML = `
+    <p>FICHA CREADA</p>
     <hr>
     <br><strong>Nombre paciente: </strong> ${nombrePaciente}
     <br><strong>Motivo Consulta: </strong> ${motivoConsulta}
     <br><strong>Fecha Consulta: </strong> ${fechaConsulta}
     `;
+
+    /* Muestra alert con la información cuando se hace el submit */
+    document.getElementById("contenido").style.display = "block";
 
     //limpiar formulario
     form.reset();
