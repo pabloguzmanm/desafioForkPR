@@ -33,5 +33,5 @@ form.addEventListener("submit", function (event) {
       `;
 
   //limpiar formulario
-  formulario.reset();
+  form.reset();
 });
