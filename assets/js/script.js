@@ -3,9 +3,6 @@ const form = document.querySelector("form");
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // Previene comportamiento por defecto
 
-  /* Muestra alert con la información cuando se hace el submit */
-  document.getElementById("contenido").style.display = "block";
-
   // Valores ingresados por el usuario
   const nombrePaciente = document.getElementById("nombrePaciente").value;
   const motivoConsulta = document.getElementById("motivoConsulta").value;
@@ -26,15 +23,20 @@ form.addEventListener("submit", function (event) {
     event.target.fechaConsulta.focus();
   }
 
-  //mostrar datos en "#contenidos" ingresados en el formulario
-  let contenido = document.querySelector("#contenido");
-  contenido.innerHTML = `
-      <hr>
-      <br><strong>Nombre paciente: </strong> ${nombrePaciente}
-      <br><strong>Motivo Consulta: </strong> ${motivoConsulta}
-      <br><strong>Fecha Consulta: </strong> ${fechaConsulta}
-      `;
+  if ((nombrePaciente != "") & (motivoConsulta != "") & (fechaConsulta != "")) {
+    /* Muestra alert con la información cuando se hace el submit */
+    document.getElementById("contenido").style.display = "block";
 
-  //limpiar formulario
-  form.reset();
+    //mostrar datos en "#contenidos" ingresados en el formulario
+    let contenido = document.querySelector("#contenido");
+    contenido.innerHTML = `
+    <hr>
+    <br><strong>Nombre paciente: </strong> ${nombrePaciente}
+    <br><strong>Motivo Consulta: </strong> ${motivoConsulta}
+    <br><strong>Fecha Consulta: </strong> ${fechaConsulta}
+    `;
+
+    //limpiar formulario
+    form.reset();
+  }
 });
