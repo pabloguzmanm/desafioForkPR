@@ -50,3 +50,7 @@
 .carousel-inner {
   height: 600px;
 }
+
+#header {
+  width: 100%;
+}

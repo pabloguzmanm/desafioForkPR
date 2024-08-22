@@ -13,13 +13,20 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="w-100 bg-light">
       <nav
-        class="navbar mb-4 border-bottom border-body navbar-expand-lg bg-body-tertiary"
+        class="navbar mb-0 border-bottom border-body navbar-expand-lg bg-body-tertiary"
         data-bs-theme="dark"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">DesafioForkPR</a>
+          <a
+            class="navbar-brand col-md-2 d-flex justify-content-center mb-1"
+            href="/"
+            ><img
+              src="assets/img/logo.webp"
+              class="img-fluid w-25"
+              alt="logo-clinica"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -33,16 +40,18 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="/">Inicio</a>
-              <a class="nav-link" href="/">Quiénes Somos?</a>
-              <a class="nav-link" href="#">Reservar Cita</a>
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Inicio</a
+              >
+              <a class="nav-link" href="/quienes_somos.html">Quiénes Somos?</a>
+              <a class="nav-link" href="/formulario.html">Reservar Cita</a>
             </div>
           </div>
         </div>
       </nav>
     </div>
     <!-- Formulario clinica -->
-    <div class="container text-center">
+    <div class="container text-center mt-3">
       <h1>Reserva tu hora</h1>
       <div class="row mt-5 justify-content-center">
         <div class="col-6">
