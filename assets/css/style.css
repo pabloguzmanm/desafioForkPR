@@ -36,9 +36,11 @@
 }
 
 .carousel-inner img {
-  width: 100%;
+  width: max-content;
   max-height: 600px;
   opacity: 0.9;
+  border-radius: 25px;
+  border: 1px solid gray;
 }
 
 .carousel-inner p {
