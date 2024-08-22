@@ -7,6 +7,7 @@ form.addEventListener("submit", function (event) {
   const nombrePaciente = document.getElementById("nombrePaciente").value;
   const motivoConsulta = document.getElementById("motivoConsulta").value;
   const fechaConsulta = document.getElementById("fechaConsulta").value;
+  const seleccionMedico = document.getElementById("seleccionMedico").value;
 
   if (nombrePaciente == "") {
     alert("Debes llenar el campo Nombre Paciente");
@@ -23,7 +24,12 @@ form.addEventListener("submit", function (event) {
     event.target.fechaConsulta.focus();
   }
 
-  if ((nombrePaciente != "") & (motivoConsulta != "") & (fechaConsulta != "")) {
+  if (seleccionMedico == "") {
+    alert("Debes llenar el campo Seleccion Especialista");
+    event.target.seleccionMedico.focus();
+  }
+
+  if ((nombrePaciente != "") & (motivoConsulta != "") & (fechaConsulta != "") & (seleccionMedico != "")) {
     //mostrar datos en "#contenidos" ingresados en el formulario
     let contenido = document.querySelector("#contenido");
     contenido.innerHTML = `
@@ -32,6 +38,7 @@ form.addEventListener("submit", function (event) {
     <br><strong>Nombre paciente: </strong> ${nombrePaciente}
     <br><strong>Motivo Consulta: </strong> ${motivoConsulta}
     <br><strong>Fecha Consulta: </strong> ${fechaConsulta}
+    <br><strong>Médico Especialista: </strong> ${seleccionMedico}
     `;
 
     /* Muestra alert con la información cuando se hace el submit */
