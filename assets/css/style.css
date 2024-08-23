@@ -3,7 +3,7 @@
   display: none;
 }
 
-#footer{
+#footer {
   background-color: black;
 }
 
@@ -33,4 +33,24 @@
 .social-icons a:hover {
   opacity: 0.8;
   transform: scale(1.5);
+}
+
+.carousel-inner img {
+  width: max-content;
+  max-height: 600px;
+  opacity: 0.9;
+  border-radius: 25px;
+  border: 1px solid gray;
+}
+
+.carousel-inner p {
+  font-size: 25px;
+}
+
+.carousel-inner {
+  height: 600px;
+}
+
+#header {
+  width: 100%;
 }
