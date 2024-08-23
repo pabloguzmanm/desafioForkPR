@@ -38,17 +38,13 @@
 .carousel-inner img {
   width: max-content;
   max-height: 600px;
-  opacity: 0.9;
+  opacity: 1;
   border-radius: 25px;
   border: 1px solid gray;
 }
 
 .carousel-inner p {
   font-size: 25px;
-}
-
-.carousel-inner {
-  height: 600px;
 }
 
 #header {
